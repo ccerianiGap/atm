@@ -1,0 +1,167 @@
+:root {
+  --bg: #f4f6fa;
+  --surface: #ffffff;
+  --surface-2: #f8f9fc;
+  --border: #dde2ec;
+  --text: #1b2333;
+  --muted: #5f6b82;
+  --primary: #2459d6;
+  --primary-hover: #1c48b0;
+  --primary-ring: rgb(36 89 214 / 0.18);
+  --on-primary: #ffffff;
+  --header-bg: #14203a;
+  --success: #1c8a4f;
+  --success-bg: #e5f6ec;
+  --success-text: #13643a;
+  --danger: #c93a3a;
+  --danger-bg: #fdecec;
+  --danger-text: #9b2424;
+  --radius: 0.5rem;
+  --radius-lg: 0.85rem;
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1522;
+    --surface: #171f30;
+    --surface-2: #1c2539;
+    --border: #2c3850;
+    --text: #e6eaf2;
+    --muted: #97a3ba;
+    --primary: #5b8cff;
+    --primary-hover: #7aa2ff;
+    --primary-ring: rgb(91 140 255 / 0.25);
+    --header-bg: #0a0f1a;
+    --success: #4cc985;
+    --success-bg: #173526;
+    --success-text: #8ee0b3;
+    --danger: #f07070;
+    --danger-bg: #3a1c1f;
+    --danger-text: #f6a5a5;
+
+    color-scheme: dark;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+a {
+  color: var(--primary);
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.container {
+  width: min(60rem, 100%);
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+/* Shared form building blocks used by the operation forms. */
+.operation-form {
+  display: grid;
+  gap: 1.1rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.field label {
+  font-weight: 600;
+}
+
+.field small {
+  color: var(--muted);
+  min-height: 1.25em;
+}
+
+.field-error,
+.field small.field-error {
+  margin: 0;
+  color: var(--danger);
+}
+
+select {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: inherit;
+}
+
+button.primary,
+.button-link {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--primary);
+  color: var(--on-primary);
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button.primary:hover:not(:disabled),
+.button-link:hover {
+  background: var(--primary-hover);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.link-button {
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.pager button {
+  padding: 0.45rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: inherit;
+  cursor: pointer;
+}

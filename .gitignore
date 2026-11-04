@@ -1,0 +1,23 @@
+# .NET
+bin/
+obj/
+TestResults/
+.vs/
+*.user
+
+# Local SQLite database
+*.db
+*.db-shm
+*.db-wal
+
+# Node / Vite (see also Frontend/atm-web/.gitignore)
+node_modules/
+dist/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+
+# Private notes (interview prep, challenge brief)
+.docs/
